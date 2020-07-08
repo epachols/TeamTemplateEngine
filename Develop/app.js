@@ -49,15 +49,18 @@ function buildTeam() {
                 // does not.
 
                 // if (teamArr) {
-                //         // The below code block throws a minor error - no such file or directory, error no -4058. maybe  have to first MAKE a file called team in outputPath, and THEN call fs.writeFile. or maybe we need fs.writeToFile Upon trying some dated fixes with googlefu, still no functional answer. ask classmates/teachers tomorrow.
-                //          //  maybe declare the below function globally, wrap the below in an `if (outputPath) {} else {make a filepath and then write}`
-                //         fs.writeFile(outputPath, render(teamArr), function(err) {
-                //                 if (err) {
-                //                       return console.log(err);
-                //                     }
-                //                     console.log("Successfully Written TeamPage, check your output folder");
-                //                   })
+
+                //     // The below code block throws a minor error - no such file or directory, error no -4058. maybe  have to first MAKE a file called team in outputPath, and THEN call fs.writeFile. or maybe we need fs.writeToFile Upon trying some dated fixes with googlefu, still no functional answer. ask classmates/teachers tomorrow.
+                //         //  maybe declare the below function globally, wrap the below in an `if (outputPath) {} else {make a filepath and then write}`
+
+                //     fs.writeFile(outputPath, render(teamArr), function(err) {
+                //         if (err) {
+                //                 return console.log(err);
                 //             }
+                //             console.log("Successfully Written TeamPage, check your output folder");
+                //     })
+
+                // }
                                     
                 //WORKSPACE**   
 
