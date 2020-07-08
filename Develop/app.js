@@ -46,14 +46,11 @@ function buildTeam() {
                 
                 
                 if (teamArr) {
-                    // notes from below 
-                    // Hint: you may need to check if the `output` folder exists and create it if it
-                    // does not. 
 
                     // The below code block throws a minor error - no such file or directory, error no -4058. maybe  have to first MAKE a file called team in outputPath, and THEN call fs.writeFile. or maybe we need fs.writeToFile? Upon trying some dated fixes with googlefu, still no functional answer. ask tomorrow.
                     //  maybe declare the below function globally, wrap the below in an `if (outputPath) {} else {make a filepath and then write}`
                     //***update:made the folder manually already, still not pathing correctly.***
-
+                                   
                     fs.writeFile(outputPath, render(teamArr), function(err) {
                         if (err) {
                                 return console.log(err);
@@ -61,9 +58,9 @@ function buildTeam() {
                             console.log("Successfully Written TeamPage, check your output folder");
                     })
 
-                }
+                } else {console.log('We need a team to build a team!')}
                                     
-                //WORKSPACE**   
+                //WORKSPACE**  
 
                 break;
                 
