@@ -13,6 +13,9 @@ class Manager extends Employee{
         this.getRole = () => {
             return 'Manager';   
            };
+        
+        ///TESTING CODE DO NOT KEEP IF BREAK
+        this.role = getRole();
     }
 }
 
