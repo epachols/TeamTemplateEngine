@@ -21,7 +21,7 @@ function buildTeam() {
     inquirer.prompt({
         type: "list",
         name: "choice",
-        message: "What do you wanna do?",
+        message: "What would you like to?",
         choices: ["Add an Engineer", "Add an Intern", "Add the Manager", "Generate Our TeamPage"]
     }).then(function ({ choice }) {
         switch (choice) {
@@ -97,7 +97,8 @@ function createEngineer() {
     ]).then(function(answers){
         const newEngineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
         teamArr.push(newEngineer);
-        console.log(teamArr);
+        //testing functionality of adding engineer to team
+        // console.log(teamArr);
         buildTeam();
     }
     )
@@ -129,7 +130,7 @@ function createIntern() {
  ]).then(function(answers){
     const newIntern = new Intern(answers.name, answers.id, answers.email, answers.school);
     teamArr.push(newIntern);
-    console.log(teamArr);
+    // console.log(teamArr);
     buildTeam();
 }
 )
@@ -138,9 +139,10 @@ function createIntern() {
 function createManager() {
 //
 //
-//if(teamArr.filter(member => member.role === "Manager").length>0) {
-// // STOP, console log "we got one!" and refire the buildTeam();
-// }
+// if(teamArr.filter(member => member.role === "Manager").length>0) {
+// console.log("E Sayz We Already Got One!")
+// buildTeam();
+// } else {sandwich inquirer info in here}
 //
 
  inquirer.prompt([
@@ -167,11 +169,13 @@ function createManager() {
  ]).then(function(answers){
     const newManager = new Intern(answers.name, answers.id, answers.email, answers.school);
     teamArr.push(newManager);
-    console.log(teamArr);
+    // console.log(teamArr);
     buildTeam();
 }
 )
 }
+
+buildTeam();
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
@@ -192,4 +196,3 @@ function createManager() {
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
 
-buildTeam();
