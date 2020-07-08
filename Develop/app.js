@@ -44,23 +44,24 @@ function buildTeam() {
                 console.log("Now making your Team Page, \n Thank you For using CodeCrow's Team Template Engine")
                 //WORKSPACE**
                 
-                // notes from below 
-                // Hint: you may need to check if the `output` folder exists and create it if it
-                // does not.
+                
+                if (teamArr) {
+                    // notes from below 
+                    // Hint: you may need to check if the `output` folder exists and create it if it
+                    // does not. 
 
-                // if (teamArr) {
+                    // The below code block throws a minor error - no such file or directory, error no -4058. maybe  have to first MAKE a file called team in outputPath, and THEN call fs.writeFile. or maybe we need fs.writeToFile? Upon trying some dated fixes with googlefu, still no functional answer. ask tomorrow.
+                    //  maybe declare the below function globally, wrap the below in an `if (outputPath) {} else {make a filepath and then write}`
+                    //***update:made the folder manually already, still not pathing correctly.***
 
-                //     // The below code block throws a minor error - no such file or directory, error no -4058. maybe  have to first MAKE a file called team in outputPath, and THEN call fs.writeFile. or maybe we need fs.writeToFile Upon trying some dated fixes with googlefu, still no functional answer. ask classmates/teachers tomorrow.
-                //         //  maybe declare the below function globally, wrap the below in an `if (outputPath) {} else {make a filepath and then write}`
+                    fs.writeFile(outputPath, render(teamArr), function(err) {
+                        if (err) {
+                                return console.log(err);
+                            }
+                            console.log("Successfully Written TeamPage, check your output folder");
+                    })
 
-                //     fs.writeFile(outputPath, render(teamArr), function(err) {
-                //         if (err) {
-                //                 return console.log(err);
-                //             }
-                //             console.log("Successfully Written TeamPage, check your output folder");
-                //     })
-
-                // }
+                }
                                     
                 //WORKSPACE**   
 
@@ -137,7 +138,9 @@ function createIntern() {
 }
 
 function createManager() {
-//
+// Two possible options for solution to issue of trying to input more than one manager:
+
+//if (!teamArr.includes(Manager) {add one} else {buildTeam()})
 //
 // if(teamArr.filter(member => member.role === "Manager").length>0) {
 // console.log("E Sayz We Already Got One!")
@@ -167,7 +170,7 @@ function createManager() {
          name: "officeNumber"
      },
  ]).then(function(answers){
-    const newManager = new Intern(answers.name, answers.id, answers.email, answers.school);
+    const newManager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
     teamArr.push(newManager);
     // console.log(teamArr);
     buildTeam();
@@ -195,4 +198,3 @@ buildTeam();
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
-
