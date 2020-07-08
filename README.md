@@ -84,7 +84,7 @@ app.js         // Runs the application
 The project must have the these classes: `Employee`, `Manager`, `Engineer`,
 `Intern`. The tests for these classes in the `tests` directory must all pass.
 
-The first class is an `Employee` parent class with the following properties and
+<!-- The first class is an `Employee` parent class with the following properties and
 methods:
 
   * name
@@ -93,7 +93,7 @@ methods:
   * getName()
   * getId()
   * getEmail()
-  * getRole() // Returns 'Employee'
+  * getRole() // Returns 'Employee' -->
 
 The other three classes will extend `Employee`. 
 
