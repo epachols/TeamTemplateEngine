@@ -8,25 +8,42 @@
     <title>My Team</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Damion&family=Electrolize&family=Gochi+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
 </head>
 
-<body>
-    <div class="container-fluid">
+<body style="font-family: 'Electrolize', sans-serif; background-color: rgba(161, 111, 18, 0.746);">
+    <div class="container-fluid" style="background-color:rgba(7, 78, 7, 0.938)">
         <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading">
-                <h1 class="text-center">My Team</h1>
+            <div class="col-12 jumbotron mb-3 team-heading" style="background-color:rgba(94, 185, 94, 0.938)">
+                <h1 class="text-center" style="font-weight: bolder; font-size:70px; font-family: 'Berkshire Swash', cursive; text-decoration:underline">
+                    Our Team's Main Info
+                </h1>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
-                {{ team }}
+    <div class="container-fluid mx-1">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12">
+                <div class="team-area row py-2 d-flex justify-content-center rounded mt-3" style="background-color: rgba(161, 111, 18, 0.746);">
+                    {{ team }}
+                </div>
             </div>
         </div>
     </div>
 </body>
 
 </html>
+
+
+<!-- FOR FONT FAMILY USE
+font-family: 'Berkshire Swash', cursive;
+
+font-family: 'Damion', cursive; manager title
+
+font-family: 'Electrolize', sans-serif; engineer titleand all
+
+font-family: 'Gochi Hand', cursive; intern title
+
+ -->
